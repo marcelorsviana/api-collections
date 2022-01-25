@@ -3,7 +3,7 @@ package one.digitalInnovation.collections
 fun main() {
     println("Criando um array de strings, atribuindo valores e imprimindo a iteração dele")
 
-    val nomes = Array(3) {""}
+    val nomes = Array(3) {""} //Lembre-se que não foi preciso informar o Generics, pois o Kotlin reconheceu o tipo de array.
     nomes[0] = "Maria"
     nomes[1] = "João"
     nomes[2] = "Susana"
