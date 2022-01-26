@@ -4,9 +4,9 @@ fun main() {
 
     // Instanciando 3 objetos do tipo Funcionario
 
-    val joao = Funcionario("Joao", 2000.0)
-    val pedro = Funcionario("Pedro", 1500.0)
-    val maria = Funcionario("Maria", 4000.0)
+    val joao = Funcionario("Joao", 2000.0, "CLT")
+    val pedro = Funcionario("Pedro", 1500.0, "PJ")
+    val maria = Funcionario("Maria", 4000.0, "CLT")
 
 
     // Atribuindo uma lista
@@ -28,9 +28,18 @@ fun main() {
     funcionarios
         .sortedBy { it.salario }
         .forEach { println(it) }
+
+    println("Imprimindo os objetos da lista agrupados por tipo de contratação através de 'groupBy'")
+    funcionarios
+        .groupBy { it.tipoContratacao }
+        .forEach { println(it) }
 }
 
-data class Funcionario( val nome:String, val salario:Double) {
+data class Funcionario(
+    val nome:String,
+    val salario:Double,
+    val tipoContratacao: String
+    ) {
     override fun toString(): String =
 
         """
