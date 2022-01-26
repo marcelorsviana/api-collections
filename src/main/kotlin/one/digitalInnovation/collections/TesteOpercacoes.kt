@@ -30,15 +30,9 @@ fun main() {
     println(salarios.find { it == 1400.0})
     println(salarios.find { it == 500.0})
 
-
     println()
     println("Utilizando o método 'any' para verificar a existência de um elemento em uma coleção.")
     println("LEMBRE-SE: Retorna 'true' caso haja o elemento na coleção e retorna 'false' caso não haja.")
     println(salarios.any { it == 1600.0})
     println(salarios.any { it == 1000.0})
-
-
-
-
-
 }
